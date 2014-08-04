@@ -36,6 +36,7 @@
 		72F4B06117C6A3B60029ADB9 /* VeryYoungKitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B05B17C6A3B60029ADB9 /* VeryYoungKitten.jpg */; };
 		72F4B06217C6A3B60029ADB9 /* YawningCat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B05C17C6A3B60029ADB9 /* YawningCat.jpg */; };
 		72F4B06417C6A9370029ADB9 /* FluffyKitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */; };
+		C237A836198F8BF600550AFF /* BouncePresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		72F4B05B17C6A3B60029ADB9 /* VeryYoungKitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = VeryYoungKitten.jpg; path = Assets/VeryYoungKitten.jpg; sourceTree = "<group>"; };
 		72F4B05C17C6A3B60029ADB9 /* YawningCat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = YawningCat.jpg; path = Assets/YawningCat.jpg; sourceTree = "<group>"; };
 		72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FluffyKitten.jpg; path = Assets/FluffyKitten.jpg; sourceTree = "<group>"; };
+		C237A834198F8BF600550AFF /* BouncePresentAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimationController.h; sourceTree = "<group>"; };
+		C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +153,8 @@
 				72A50CF717C66EE1009EF8D2 /* Assets */,
 				72A50CC117C65A1A009EF8D2 /* AppDelegate.h */,
 				72A50CC217C65A1A009EF8D2 /* AppDelegate.m */,
+				C237A834198F8BF600550AFF /* BouncePresentAnimationController.h */,
+				C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */,
 				72A50CC417C65A1A009EF8D2 /* Main.storyboard */,
 				72A50CCA17C65A1A009EF8D2 /* MasterViewController.h */,
 				72A50CCB17C65A1A009EF8D2 /* MasterViewController.m */,
@@ -320,6 +325,7 @@
 			files = (
 				72A50CF617C66EA6009EF8D2 /* Cat.m in Sources */,
 				72A50CCF17C65A1A009EF8D2 /* DetailViewController.m in Sources */,
+				C237A836198F8BF600550AFF /* BouncePresentAnimationController.m in Sources */,
 				72A50CF017C65D63009EF8D2 /* AboutViewController.m in Sources */,
 				72A50CCC17C65A1A009EF8D2 /* MasterViewController.m in Sources */,
 				72A50CC317C65A1A009EF8D2 /* AppDelegate.m in Sources */,
@@ -446,10 +452,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: wei zhou (6XNV3B3N8E)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ILoveCatz/ILoveCatz-Prefix.pch";
 				INFOPLIST_FILE = "ILoveCatz/ILoveCatz-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4131B4A6-C945-49F3-9DA6-384E7010F1C5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -459,10 +467,12 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer: wei zhou (6XNV3B3N8E)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ILoveCatz/ILoveCatz-Prefix.pch";
 				INFOPLIST_FILE = "ILoveCatz/ILoveCatz-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "4131B4A6-C945-49F3-9DA6-384E7010F1C5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
