@@ -10,12 +10,23 @@
 #import "DetailViewController.h"
 #import "AppDelegate.h"
 #import "Cat.h"
+#import "BouncePresentAnimationController.h"
 
-@interface MasterViewController ()
+@interface MasterViewController () <UIViewControllerTransitioningDelegate>
 
 @end
 
-@implementation MasterViewController
+@implementation MasterViewController {
+    BouncePresentAnimationController *_bounceAnimationController;
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+    if (self = [super initWithCoder:aDecoder]) {
+        _bounceAnimationController = [BouncePresentAnimationController new];
+    }
+    return self;
+}
 
 - (NSArray *)cats {
     return ((AppDelegate *)[[UIApplication sharedApplication] delegate]).cats;
@@ -29,6 +40,10 @@
     self.navigationItem.titleView = imageView;
 }
 
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
+{
+    return _bounceAnimationController;
+}
 
 #pragma mark - Table View
 
@@ -60,6 +75,10 @@
         
         // provide this to the detail view
         [[segue destinationViewController] setCat:cat];
+    }
+    if ([segue.identifier isEqualToString:@"ShowAbout"]) {
+        UIViewController *toVC = segue.destinationViewController;
+        toVC.transitioningDelegate = self;
     }
 }
 
