@@ -36,6 +36,7 @@
 		72F4B06117C6A3B60029ADB9 /* VeryYoungKitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B05B17C6A3B60029ADB9 /* VeryYoungKitten.jpg */; };
 		72F4B06217C6A3B60029ADB9 /* YawningCat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B05C17C6A3B60029ADB9 /* YawningCat.jpg */; };
 		72F4B06417C6A9370029ADB9 /* FluffyKitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */; };
+		C21642541990E93D00BEC424 /* PinchInteractionController.m in Sources */ = {isa = PBXBuildFile; fileRef = C21642531990E93D00BEC424 /* PinchInteractionController.m */; };
 		C237A836198F8BF600550AFF /* BouncePresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */; };
 		C2A685B11990A3CE004A6A46 /* ShrinkDismissAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A685B01990A3CE004A6A46 /* ShrinkDismissAnimationController.m */; };
 		C2CF62BD1990C2AD003C8169 /* FlipAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2CF62BC1990C2AD003C8169 /* FlipAnimationController.m */; };
@@ -89,6 +90,8 @@
 		72F4B05B17C6A3B60029ADB9 /* VeryYoungKitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = VeryYoungKitten.jpg; path = Assets/VeryYoungKitten.jpg; sourceTree = "<group>"; };
 		72F4B05C17C6A3B60029ADB9 /* YawningCat.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = YawningCat.jpg; path = Assets/YawningCat.jpg; sourceTree = "<group>"; };
 		72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FluffyKitten.jpg; path = Assets/FluffyKitten.jpg; sourceTree = "<group>"; };
+		C21642521990E93D00BEC424 /* PinchInteractionController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PinchInteractionController.h; sourceTree = "<group>"; };
+		C21642531990E93D00BEC424 /* PinchInteractionController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PinchInteractionController.m; sourceTree = "<group>"; };
 		C237A834198F8BF600550AFF /* BouncePresentAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimationController.h; sourceTree = "<group>"; };
 		C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimationController.m; sourceTree = "<group>"; };
 		C2A685AF1990A3CE004A6A46 /* ShrinkDismissAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShrinkDismissAnimationController.h; sourceTree = "<group>"; };
@@ -170,6 +173,8 @@
 				C2CF62BC1990C2AD003C8169 /* FlipAnimationController.m */,
 				C2CF62C11990D2B7003C8169 /* SwipeInteractionController.h */,
 				C2CF62C21990D2B7003C8169 /* SwipeInteractionController.m */,
+				C21642521990E93D00BEC424 /* PinchInteractionController.h */,
+				C21642531990E93D00BEC424 /* PinchInteractionController.m */,
 				72A50CC417C65A1A009EF8D2 /* Main.storyboard */,
 				72A50CCA17C65A1A009EF8D2 /* MasterViewController.h */,
 				72A50CCB17C65A1A009EF8D2 /* MasterViewController.m */,
@@ -344,6 +349,7 @@
 				C2CF62BD1990C2AD003C8169 /* FlipAnimationController.m in Sources */,
 				72A50CF017C65D63009EF8D2 /* AboutViewController.m in Sources */,
 				C2A685B11990A3CE004A6A46 /* ShrinkDismissAnimationController.m in Sources */,
+				C21642541990E93D00BEC424 /* PinchInteractionController.m in Sources */,
 				72A50CCC17C65A1A009EF8D2 /* MasterViewController.m in Sources */,
 				C2CF62C31990D2B7003C8169 /* SwipeInteractionController.m in Sources */,
 				72A50CC317C65A1A009EF8D2 /* AppDelegate.m in Sources */,
