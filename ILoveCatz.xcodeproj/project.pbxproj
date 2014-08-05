@@ -37,6 +37,7 @@
 		72F4B06217C6A3B60029ADB9 /* YawningCat.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B05C17C6A3B60029ADB9 /* YawningCat.jpg */; };
 		72F4B06417C6A9370029ADB9 /* FluffyKitten.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */; };
 		C237A836198F8BF600550AFF /* BouncePresentAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */; };
+		C2A685B11990A3CE004A6A46 /* ShrinkDismissAnimationController.m in Sources */ = {isa = PBXBuildFile; fileRef = C2A685B01990A3CE004A6A46 /* ShrinkDismissAnimationController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		72F4B06317C6A9370029ADB9 /* FluffyKitten.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = FluffyKitten.jpg; path = Assets/FluffyKitten.jpg; sourceTree = "<group>"; };
 		C237A834198F8BF600550AFF /* BouncePresentAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BouncePresentAnimationController.h; sourceTree = "<group>"; };
 		C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BouncePresentAnimationController.m; sourceTree = "<group>"; };
+		C2A685AF1990A3CE004A6A46 /* ShrinkDismissAnimationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ShrinkDismissAnimationController.h; sourceTree = "<group>"; };
+		C2A685B01990A3CE004A6A46 /* ShrinkDismissAnimationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ShrinkDismissAnimationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +158,8 @@
 				72A50CC217C65A1A009EF8D2 /* AppDelegate.m */,
 				C237A834198F8BF600550AFF /* BouncePresentAnimationController.h */,
 				C237A835198F8BF600550AFF /* BouncePresentAnimationController.m */,
+				C2A685AF1990A3CE004A6A46 /* ShrinkDismissAnimationController.h */,
+				C2A685B01990A3CE004A6A46 /* ShrinkDismissAnimationController.m */,
 				72A50CC417C65A1A009EF8D2 /* Main.storyboard */,
 				72A50CCA17C65A1A009EF8D2 /* MasterViewController.h */,
 				72A50CCB17C65A1A009EF8D2 /* MasterViewController.m */,
@@ -327,6 +332,7 @@
 				72A50CCF17C65A1A009EF8D2 /* DetailViewController.m in Sources */,
 				C237A836198F8BF600550AFF /* BouncePresentAnimationController.m in Sources */,
 				72A50CF017C65D63009EF8D2 /* AboutViewController.m in Sources */,
+				C2A685B11990A3CE004A6A46 /* ShrinkDismissAnimationController.m in Sources */,
 				72A50CCC17C65A1A009EF8D2 /* MasterViewController.m in Sources */,
 				72A50CC317C65A1A009EF8D2 /* AppDelegate.m in Sources */,
 				72A50CBF17C65A1A009EF8D2 /* main.m in Sources */,
@@ -457,7 +463,7 @@
 				GCC_PREFIX_HEADER = "ILoveCatz/ILoveCatz-Prefix.pch";
 				INFOPLIST_FILE = "ILoveCatz/ILoveCatz-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8203231D-8117-4D58-B847-EF1BD87023BF";
+				PROVISIONING_PROFILE = "4131B4A6-C945-49F3-9DA6-384E7010F1C5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -472,7 +478,7 @@
 				GCC_PREFIX_HEADER = "ILoveCatz/ILoveCatz-Prefix.pch";
 				INFOPLIST_FILE = "ILoveCatz/ILoveCatz-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "8203231D-8117-4D58-B847-EF1BD87023BF";
+				PROVISIONING_PROFILE = "4131B4A6-C945-49F3-9DA6-384E7010F1C5";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

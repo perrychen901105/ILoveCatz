@@ -16,7 +16,7 @@
 - (NSTimeInterval)transitionDuration:(id<UIViewControllerContextTransitioning>)transitionContext
 {
     // length of the transition animation
-    return 2.0;
+    return 0.8;
 }
 
 - (void)animateTransition:(id<UIViewControllerContextTransitioning>)transitionContext
@@ -26,6 +26,7 @@
      *  Using the transition context, retrieve the view controller you're navigating to and the final frame the transition context should have when the animation is completed.
      */
     UIViewController *toViewController = [transitionContext viewControllerForKey:UITransitionContextToViewControllerKey];
+    UIViewController *fromViewController = [transitionContext viewControllerForKey:UITransitionContextFromViewControllerKey];
     CGRect finalFrame = [transitionContext finalFrameForViewController:toViewController];
     
     // 2. obtain the container view
@@ -54,15 +55,32 @@
      */
     NSTimeInterval duration = [self transitionDuration:transitionContext];
     [UIView animateWithDuration:duration
+                          delay:0.0
+         usingSpringWithDamping:0.6
+          initialSpringVelocity:0
+                        options:UIViewAnimationOptionCurveLinear
                      animations:^{
+                         // set the state to animate to
+                         fromViewController.view.alpha = 0.5;
                          toViewController.view.frame = finalFrame;
                      } completion:^(BOOL finished) {
-                         // 6. inform the context of completion
-                         /**
-                          * Inform the transition context when the animation completes. The framework then ensures the final state is consistent and removes the from- view from the container.
-                          */
+                         // inform the context of completion
+                         fromViewController.view.alpha = 1.0;
                          [transitionContext completeTransition:YES];
                      }];
+    
+//    [UIView animateWithDuration:duration
+//                     animations:^{
+//                         fromViewController.view.alpha = 0.5;
+//                         toViewController.view.frame = finalFrame;
+//                     } completion:^(BOOL finished) {
+//                         // 6. inform the context of completion
+//                         /**
+//                          * Inform the transition context when the animation completes. The framework then ensures the final state is consistent and removes the from- view from the container.
+//                          */
+//                         fromViewController.view.alpha = 1.0;
+//                         [transitionContext completeTransition:YES];
+//                     }];
 }
 
 @end

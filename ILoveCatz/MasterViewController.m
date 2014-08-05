@@ -11,6 +11,7 @@
 #import "AppDelegate.h"
 #import "Cat.h"
 #import "BouncePresentAnimationController.h"
+#import "ShrinkDismissAnimationController.h"
 
 @interface MasterViewController () <UIViewControllerTransitioningDelegate>
 
@@ -18,12 +19,14 @@
 
 @implementation MasterViewController {
     BouncePresentAnimationController *_bounceAnimationController;
+    ShrinkDismissAnimationController *_shrinkDismissAnimationController;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
 {
     if (self = [super initWithCoder:aDecoder]) {
         _bounceAnimationController = [BouncePresentAnimationController new];
+        _shrinkDismissAnimationController = [ShrinkDismissAnimationController new];
     }
     return self;
 }
@@ -43,6 +46,11 @@
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
 {
     return _bounceAnimationController;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
+{
+    return _shrinkDismissAnimationController;
 }
 
 #pragma mark - Table View
