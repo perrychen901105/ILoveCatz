@@ -12,14 +12,18 @@
 #import "Cat.h"
 #import "BouncePresentAnimationController.h"
 #import "ShrinkDismissAnimationController.h"
+#import "FlipAnimationController.h"
+#import "SwipeInteractionController.h"
 
-@interface MasterViewController () <UIViewControllerTransitioningDelegate>
+@interface MasterViewController () <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
 @end
 
 @implementation MasterViewController {
     BouncePresentAnimationController *_bounceAnimationController;
     ShrinkDismissAnimationController *_shrinkDismissAnimationController;
+    FlipAnimationController *_flipAnimationController;
+    SwipeInteractionController *_swipeInteractionController;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -27,6 +31,8 @@
     if (self = [super initWithCoder:aDecoder]) {
         _bounceAnimationController = [BouncePresentAnimationController new];
         _shrinkDismissAnimationController = [ShrinkDismissAnimationController new];
+        _flipAnimationController = [FlipAnimationController new];
+        _swipeInteractionController = [SwipeInteractionController new];
     }
     return self;
 }
@@ -41,6 +47,7 @@
     // see a cat image as a title
     UIImageView* imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"cat"]];
     self.navigationItem.titleView = imageView;
+    self.navigationController.delegate = self;
 }
 
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForPresentedController:(UIViewController *)presented presentingController:(UIViewController *)presenting sourceController:(UIViewController *)source
@@ -51,6 +58,20 @@
 - (id<UIViewControllerAnimatedTransitioning>)animationControllerForDismissedController:(UIViewController *)dismissed
 {
     return _shrinkDismissAnimationController;
+}
+
+- (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
+{
+    return  _swipeInteractionController.interactionInProgress ? _swipeInteractionController : nil;
+}
+
+- (id<UIViewControllerAnimatedTransitioning>)navigationController:(UINavigationController *)navigationController animationControllerForOperation:(UINavigationControllerOperation)operation fromViewController:(UIViewController *)fromVC toViewController:(UIViewController *)toVC
+{
+    if (operation == UINavigationControllerOperationPush) {
+        [_swipeInteractionController wireToViewController:toVC];
+    }
+    _flipAnimationController.reverse = operation == UINavigationControllerOperationPop;
+    return _flipAnimationController;
 }
 
 #pragma mark - Table View
