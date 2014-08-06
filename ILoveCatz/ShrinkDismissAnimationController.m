@@ -72,6 +72,7 @@
                                                           relativeDuration:0.5
                                                                 animations:^{
                                                                     intermediateView.frame = shrunkenFrame;
+//                                                                    fromViewController.view.transform = CGAffineTransformMakeScale(0.5, 0.5);
                                                                     toViewController.view.alpha = 0.5;
                                                                 }];
                                   // 3b. keyframe two
@@ -82,6 +83,7 @@
                                                           relativeDuration:0.5
                                                                 animations:^{
                                                                     intermediateView.frame = fromFinalFrame;
+//                                                                    fromViewController.view.frame = fromFinalFrame;
                                                                     toViewController.view.alpha = 1.0;
                                                                 }];
                               } completion:^(BOOL finished) {

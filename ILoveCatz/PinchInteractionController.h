@@ -10,6 +10,8 @@
 
 @interface PinchInteractionController : UIPercentDrivenInteractiveTransition
 
-//- (void)wireToViewController:
+- (void)wireToViewController:(UIViewController*)viewController;
+
+@property (nonatomic, assign) BOOL interactionInProgress;
 
 @end

@@ -9,13 +9,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ILoveCatz/MasterViewController.m"
-            timestampString = "428925396.335749"
+            filePath = "ILoveCatz/SwipeInteractionController.m"
+            timestampString = "428987605.461852"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "-navigationController:animationControllerForOperation:fromViewController:toViewController:"
+            startingLineNumber = "40"
+            endingLineNumber = "40"
+            landmarkName = "-handleGesture:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
@@ -25,13 +25,13 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "ILoveCatz/MasterViewController.m"
-            timestampString = "428925505.363868"
+            filePath = "ILoveCatz/PinchInteractionController.m"
+            timestampString = "428994334.762064"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
-            landmarkName = "-navigationController:interactionControllerForAnimationController:"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "-handleGesture:"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

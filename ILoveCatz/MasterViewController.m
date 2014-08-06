@@ -14,6 +14,7 @@
 #import "ShrinkDismissAnimationController.h"
 #import "FlipAnimationController.h"
 #import "SwipeInteractionController.h"
+#import "PinchInteractionController.h"
 
 @interface MasterViewController () <UIViewControllerTransitioningDelegate, UINavigationControllerDelegate>
 
@@ -24,6 +25,7 @@
     ShrinkDismissAnimationController *_shrinkDismissAnimationController;
     FlipAnimationController *_flipAnimationController;
     SwipeInteractionController *_swipeInteractionController;
+    PinchInteractionController *_pinchInteractionController;
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder
@@ -33,6 +35,7 @@
         _shrinkDismissAnimationController = [ShrinkDismissAnimationController new];
         _flipAnimationController = [FlipAnimationController new];
         _swipeInteractionController = [SwipeInteractionController new];
+        _pinchInteractionController = [PinchInteractionController new];
     }
     return self;
 }
@@ -60,6 +63,11 @@
     return _shrinkDismissAnimationController;
 }
 
+//- (id<UIViewControllerInteractiveTransitioning>)interactionControllerForDismissal:(id<UIViewControllerAnimatedTransitioning>)animator {
+//    return _pinchInteractionController.interactionInProgress ? _pinchInteractionController : nil;
+//}
+
+#pragma mark - navigation
 - (id<UIViewControllerInteractiveTransitioning>)navigationController:(UINavigationController *)navigationController interactionControllerForAnimationController:(id<UIViewControllerAnimatedTransitioning>)animationController
 {
     return  _swipeInteractionController.interactionInProgress ? _swipeInteractionController : nil;
@@ -107,6 +115,7 @@
     }
     if ([segue.identifier isEqualToString:@"ShowAbout"]) {
         UIViewController *toVC = segue.destinationViewController;
+        [_pinchInteractionController wireToViewController:toVC];
         toVC.transitioningDelegate = self;
     }
 }
